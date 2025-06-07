@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 
 :root{
     --signature-color: #1f1f21;
@@ -22,7 +23,6 @@ body{
     width: fit-content;
     margin: 0 auto;
     padding: 0px 80px;
-
 }
 
 a{
@@ -107,15 +107,15 @@ a{
     height: 100vmin;
     display: flex;
     justify-content: start;
-    align-items: start;
+    align-items: center;
     gap: 1.1em;
 }
 
 .card{
     width: 280px;
-    height: 300px;
+    height: 350px;
     background-color: hsl(0, 0%, 5%);
-    clip-path: path("M 0,30 A 30,30 0,0,1 30,15 L 150,15 A 30,30 0,0,1 180,0 L 250,0 A 30,30 0,0,1 280,30 L 280,270 A 30,30 0,0,1 250,300 L 30,300 A 30,30 0,0,1 0,270 L 0,30 Z");
+    clip-path: path("M 0,30 A 30,30 0,0,1 30,15 L 150,15 A 30,30 0,0,1 180,0 L 250,0 A 30,30 0,0,1 280,30 L 280,320 A 30,30 0,0,1 250,350 L 30,350 A 30,30 0,0,1 0,320 L 0,30 Z");
     padding: 40px 40px;
 }
 
@@ -129,10 +129,11 @@ a{
 }
 
 .card-title{
-    font-size: 1.5rem;
-    font-weight: bolder;
+    font-size: 2.4rem;
+    font-weight: 600;
     text-wrap: wrap;
     margin-bottom: 10px;
+    font-family: dosis, Poppins, sans-serif;
 }
 
 .card-hr{
@@ -147,5 +148,113 @@ a{
 }
 
 .card-description{
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    letter-spacing: 1.25px;
+}
+
+.card-description:nth-last-child(1){
+    font-weight: bold;
+}
+.card-icon-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+#card-2{
+    background-color: #8A3FFC;
+    color: var(--signature-color);
+}
+
+#card-hr-2{
+    border: var(--signature-color) solid 1px;
+}
+
+.card-icon-container .card-icon{
+    height: 60px;
+    width: 60px;
+    padding: 15px;
+    overflow: visible;
+    background-color: var(--signature-color);
+    border-radius: 50px;
+    border: solid #8A3FFC 3px;
+    margin-right: -15px;
+}
+
+.card-icon-container .card-icon:nth-child(2){
+    transform: rotate(90deg);
+}
+.card-icon-container .card-icon:nth-child(3), .card-icon-container .card-icon:nth-child(4){
+    z-index: 3;
+}
+
+.card-title-container{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: row;
+}
+
+.card-title-1{
+    font-size: 5.8rem;
+    font-family: dosis, Poppins, sans-serif;
+}
+.card-title-2{
+    width: 20px;
+    height: fit-content;
+    text-wrap: wrap;
+    font-size: 1.8rem;
+    font-weight: bold;
+    word-spacing: -55px;
+    margin-top: 13px;
+    margin-left: 5px;
+}
+
+#card-3{
+    background-color: #93D5E1;
+    color: var(--signature-color);
+}
+
+#card-icon-container-3 .card-icon{
+    border: solid #93D5E1;
+    padding: 0px;
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+    background-color: var(--signature-color);
+    border-radius: 50px;
+    object-fit: cover;
+    
+}
+#card-icon-container-3 .card-icon:nth-child(2){
+    transform: rotate(0deg);
+}
+
+#card-icon-3-plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #93D5E1;
+    font-size: 1.7rem;
+}
+
+#card-4{
+    background-color: #D1EA5A;
+    color: #1f1f21;
+}
+
+#card-4 .card-title{
+    margin-top: 41%;
+    font-size: 1.9rem;
+}
+
+#card-4 .card-footer{
+    margin-top: 0px;
+}
+
+.featured-work-container{
+    min-height: 100vh;
 }
