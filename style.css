@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+:root{
+    --signature-color: #1f1f21;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: var(--signature-color);
+    color: #ffffff;
+    font-family: poppins, sans-serif;
+}
+body{
+    height: auto;
+    max-width: 100%;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0px 80px;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.hero{
+    min-height: 650px;
+    margin: 0 auto;
+}
+
+.navbar{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0px;    
+}
+.logo{
+    font-size: 3rem;
+    font-family: kaushan script, poppins;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.hero-content-container{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.hero-title-primary{
+    max-width: 440px;
+    height: auto;
+    font-size: 5rem;
+    line-height: 80px;
+    letter-spacing: 7px;
+}
+
+.hero-second-title-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: -20px;
+    margin-left: 3px;
+}
+
+.hero-miniparagraph{
+    max-width: 20%;
+    font-size: 0.9rem;
+}
+
+.hero-title-secondary{
+    font-size: 5rem;
+}
+
+.hero-ending{
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.scroll-to-explore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-to-explore > .scroll-icon{
+    margin-left: 10px;
+    border-bottom: solid 1.5px white;
+}
+
+.card-container{
+    height: 100vmin;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 1.1em;
+}
+
+.card{
+    width: 280px;
+    height: 300px;
+    background-color: hsl(0, 0%, 5%);
+    clip-path: path("M 0,30 A 30,30 0,0,1 30,15 L 150,15 A 30,30 0,0,1 180,0 L 250,0 A 30,30 0,0,1 280,30 L 280,270 A 30,30 0,0,1 250,300 L 30,300 A 30,30 0,0,1 0,270 L 0,30 Z");
+    padding: 40px 40px;
+}
+
+.card-image{
+    min-height: 80px;
+    max-width: 70px;
+    border-radius: 1000%;
+    border-bottom: hsl(300, 100%, 35%) solid 3px;
+    margin: 5px 0px 10px 0px;
+    object-fit: cover;
+}
+
+.card-title{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.card-hr{
+    width: 100%;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card-description{
+    font-size: 0.6rem;
+}
