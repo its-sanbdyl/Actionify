@@ -86,7 +86,7 @@ a{
 .hero-second-title-container{
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: start;
     margin-top: -20px;
     margin-left: 3px;
 }
@@ -94,6 +94,7 @@ a{
 .hero-miniparagraph{
     max-width: 20%;
     font-size: 0.9rem;
+    margin-top: 2%;
 }
 
 .hero-title-secondary{
@@ -120,12 +121,13 @@ a{
 
 .card-container{
     height: max-content;
+    width: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 1.1em;
-    overflow: hidden;
-
+    gap: 20px;
+    overflow-x: scroll;
+    scrollbar-width: 1;
 }
 
 .card{
@@ -343,7 +345,7 @@ a{
     white-space: nowrap;
 }
 
-#about-me-container{
+.about-me-container{
     margin-top: 100px;
     min-height: 100vh;
     width: calc(100% + 160px);
