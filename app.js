@@ -1,4 +1,3 @@
-
 const MenuTitle = document.getElementById("menu-title");
 const MenuIcon = document.getElementById("menu-icon");
 const DropDownContainer = document.getElementById("drop-down-menu");
