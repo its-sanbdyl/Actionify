@@ -31,6 +31,52 @@ a{
     color: white;
 }
 
+.loader{
+    min-height: 100vh;
+    width: 100vw;
+    translate: -80px;
+    position: fixed;
+    background-color: var(--signature-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000000;
+}
+
+.spinner{
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background-color: hsl(0, 100%, 50%);
+    z-index: 100000000000000000000000000;
+    position: relative;
+    animation: bounce 5s infinite reverse;
+}
+
+.spinner::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 120%;
+    border-radius: 100px;
+    background-color: hsl(0, 100%, 75%);
+    animation: bounce 5s infinite alternate-reverse;
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
 .hero{
     width: calc(100% + 160px);
     min-height: 630px;
@@ -52,7 +98,20 @@ a{
     align-items: center;
     padding: 80px 0px;
     position: relative;
+    animation: NavScrollAnimation linear;
+    animation-timeline: view();
 }
+
+@keyframes NavScrollAnimation{
+    0%,80%{
+        opacity: 1;
+        filter: blur(0);
+    }
+    90%,100%{
+        opacity: 0;
+    }
+}
+
 .logo-top{
     min-height: max-content;
     font-size: 3rem;
@@ -98,11 +157,9 @@ a{
     from{
         --angle: 0deg;
     }
-
     to{
         --angle: 360deg;
     }
-    
 }
 
 .menu{
@@ -190,9 +247,24 @@ a{
     line-height: 70px;
     letter-spacing: 5px;
     margin-top: 80px;
-    background: linear-gradient(to top right, rgb(255, 102, 0), red, black);
+    background: linear-gradient(to top right, rgb(255, 102, 0), hsl(0, 0%, 20%),red, hsl(0, 0%, 20%), rgb(255, 102, 0) );
     color: transparent;
     background-clip: text;
+    animation: blurScrollAnimation;
+    animation-timeline: view();
+}
+
+@keyframes blurScrollAnimation{
+    0%,70%{
+        opacity: 1;
+        scale: 1;
+        filter: blur(0);
+    }
+    100%{
+        opacity: 0;
+        scale: 0;
+        filter: blur(0.1em);
+    }
 }
 
 .hero-ending{
@@ -205,6 +277,19 @@ a{
     justify-content: space-between;
     align-items: center;
     margin-top: 100px;
+    animation: ScrollAnimation2;
+    animation-timeline: view();
+}
+
+@keyframes ScrollAnimation2{
+    0%,70%{
+        opacity: 1;
+        filter: blur(0);
+    }
+    100%{
+        opacity: 0;
+        filter: blur(0.1em);
+    }
 }
 
 .scroll-to-explore{
@@ -219,14 +304,31 @@ a{
 }
 
 .card-container{
-    height: max-content;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 50px 0px 0px 0px;
-    overflow-x: scroll;
+    animation: ScrollAnimation3;
+    animation-timeline: view();
+    animation-range: entry 0% cover 100%;   
+}
+
+@keyframes ScrollAnimation3{
+    0%, 50%{
+        opacity: 1;
+        transform: translateX(0px) translateY(0px);
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-380px) translateY(0px);
+    }
 }
 
 .card{
@@ -391,7 +493,7 @@ a{
     font-size: 4.7rem;
     flex: 0 0 auto;
     text-wrap: nowrap;
-    text-align: center; 
+    text-align: center;
 }
 
 .fw-content-container{
