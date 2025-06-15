@@ -4,39 +4,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     Loader.style.display = "none";
     Spinner.style.display = "none";
-})
-
-const MenuTitle = document.getElementById("menu-title");
-const MenuIcon = document.getElementById("menu-icon");
-const DropDownContainer = document.getElementById("drop-down-menu");
-const CrossIcon = document.getElementById("cross-icon");
-
-
-MenuTitle.addEventListener(("click"), (e) => {
-    e.target.style.display ="none";
-    DropDownContainer.style.display = "flex";
-    MenuIcon.style.translate = "-95px 0px";
-    MenuIcon.style.animation= "fadeOut 0.5s infinite linear";
-    setTimeout(() => {MenuIcon.style.display = "none";
-                      CrossIcon.style.display = "flex";
-    }, 500);
 });
 
-MenuIcon.addEventListener(("click"), (e) => {
-    MenuTitle.style.display ="none";
-    DropDownContainer.style.display = "flex";
-    MenuIcon.style.translate = "-95px";
-    MenuIcon.style.animation= "fadeOut 0.5s 1 linear";
-    setTimeout(() => {MenuIcon.style.display = "none";
-                      CrossIcon.style.display = "block";
-    }, 500);
-});
+const $ = id => document.getElementById(id);
+const MenuTitle = $("menu-title"),
+      MenuIcon = $("menu-icon"),
+      DropDown = $("drop-down-menu"),
+      CrossIcon = $("cross-icon");
 
-CrossIcon.addEventListener(("click"), (e) => {
-    CrossIcon.style.display = "none";
-    DropDownContainer.style.display = "none";
-    MenuTitle.style.display = "flex"
-    MenuIcon.style.translate = "0px 0px";
-    MenuIcon.style.display = "flex";
-    MenuIcon.style.animation= "none"; 
-});
+const showMenu = () => {
+  MenuTitle.style.display = "none";
+  DropDown.style.display = "flex";
+  MenuIcon.style.translate = "-95px 0px";
+  MenuIcon.style.animation = "fadeOut 0.5s linear";
+  
+  setTimeout(() => {
+    MenuIcon.style.display = "none";
+    CrossIcon.style.display = "flex";
+  }, 500);
+};
+
+const hideMenu = () => {
+  CrossIcon.style.display = "none";
+  DropDown.style.display = "none";
+  MenuTitle.style.display = "flex";
+  MenuIcon.style.translate = "0 0";
+  MenuIcon.style.display = "flex";
+  MenuIcon.style.animation = "none";
+};
+
+MenuTitle.addEventListener("click", showMenu);
+MenuIcon.addEventListener("click", showMenu);
+CrossIcon.addEventListener("click", hideMenu);
