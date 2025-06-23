@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     Spinner.style.display = "none";
 });
 
+//Height of the Hero
+document.querySelector('.hero').style.height = window.innerHeight + "px";
+
+
 //Menu of the Navbar
 const $ = id => document.getElementById(id);
 const MenuTitle = $("menu-title"),

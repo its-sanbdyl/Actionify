@@ -31,7 +31,7 @@ body{
     max-width: 100%;
     width: fit-content;
     margin: 0 auto;
-    padding: 0px 80px;
+    padding: 0px clamp(10px, 80px, 90px);
 }
 
 a{
@@ -87,7 +87,6 @@ a{
 
 .hero{
     width: calc(100% + 160px);
-    min-height: 630px;
     margin: 0 auto;
     translate: -80px;
     padding: 0px 80px;
@@ -467,6 +466,7 @@ a:hover{
     border-radius: 10px;
     top: 5%;
     left: 60%;
+    white-space: nowrap;
 }
 
 .pc-img{
@@ -604,57 +604,6 @@ a:hover{
     animation: ScrollAnimation3 both;
     animation-timeline: view();
     animation-range: entry 0% cover 100%;   
-}
-
-@media (max-width: 1355px){
-    body{
-        padding: 0px 40px;
-    }
-
-
-    .card-container{
-    animation: ScrollAnimation4 both;
-    animation-timeline: view();   
-}
-
-   @keyframes ScrollAnimation4{
-    0%, 70%{
-        opacity: 1;
-        transform: translateX(0px) translateY(0px);
-        filter: blur(0);
-    }
-    100%{
-        opacity: 0;
-        transform: translateX(-380px) translateY(0px);
-        filter: blur(0.2em);
-    }
-    
-}
-
-#card-1, #card-3{
-    margin-top: 300px;
-}
-
-#card-4{
-    margin-top: -150px;
-}
-
-}
-
-
-@media (max-width: 995px){
- body{
-    padding: 0px 40px;
- }
-.logo-top{
-    scale: 0.8;
-}
- .hero-title-primary{
-    font-size: 3rem;   
-}
-.hero-button{
-    font-size: 1rem;
-}
 }
 
 
