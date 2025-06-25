@@ -83,7 +83,7 @@
                     <div class="scroll-to-explore"><a href="#card-container">SCROLL TO EXPLORE</a></div>
                     <a href="#card-container" class="scroll-icon"><svg width="30px" height="30px" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g fill="none" fill-rule="evenodd" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" transform="translate(6 6)"> <path d="m8.5 1.5v7h-7"></path> <path d="m.5.5 8 8"></path> </g> </g></svg></a>
                 </div>
-                <a href="#about-me-container">ABOUT ME</a>
+                <a href="#about-me-container" class="hero-about-me">ABOUT ME</a>
             </div>
         </section>
     </main>
@@ -91,7 +91,7 @@
         <h5 class="pnp-title">• Plans & Pricing •</h5>
         <h3 class="cyp-title">Choose your plan</h3>
         <div class="package-card-container">
-            <div class="package-card" id="package-card-1">
+            <div class="package-card" id="package-card-1" data-index="0">
                 <img class="pc-img" src="assets/icons/logo-head.png" alt="icon">
                 <h2 class="pc-top-heading">Starter Plan</h2>
                 <p class="pc-paragraph">Ideal for marketing newbies and small business teams</p>
@@ -109,7 +109,7 @@
                     <div class="as-items">Copywriting<hr>Post Scheduling<hr>Monthly Highlighted Summary</div>
                 </fieldset>
             </div>
-            <div class="package-card" id="package-card-2">
+            <div class="package-card" id="package-card-2" data-index="1">
                 <div class="package-caption">Most Popular</div>
                 <img class="pc-img" src="assets/icons/logo-head.png" alt="icon">
                 <h2 class="pc-top-heading">Growth Plan</h2>
@@ -131,7 +131,7 @@
                     <div class="as-items">Copywriting & Hashtag Strategy<hr>Page Setup & Optimization<hr>Basic Online Business Setup<hr>Post Scheduling<hr>Monthly Performance Summary</div>
                 </fieldset>
             </div>
-            <div class="package-card" id="package-card-3">
+            <div class="package-card" id="package-card-3" data-index="2">
                 <img class="pc-img" src="assets/icons/logo-head.png" alt="icon">
                 <h2 class="pc-top-heading">Premium Plan</h2>
                 <p class="pc-paragraph">Ideal for marketing newbies and small business teams</p>
@@ -139,7 +139,12 @@
                 <button class="plan-choose-btn"><a>Choose this plan</a></button>
                 <fieldset class="platform-container">
                     <legend class="p-legend">Platforms</legend>
-                    <div class="platform-items">Facebook<hr class="package-hr">Instagram<hr class="package-hr">Tiktok<hr class="package-hr">LinkedIn</div>
+                    <ul class="platform-items">
+                        <li>Facebook</li><hr class="package-hr">
+                        <li>Instagram</li><hr class="package-hr">
+                        <li>Tiktok</li><hr class="package-hr">
+                        <li>LinkedIn</li>
+                    </ul>
                 </fieldset>
                 <div class="package-service">•<p> 15 Reels per month [Shot in 4K, Voice-over included]</p></div>
                 <div class="package-service">•<p> 20 Graphical Banners [High-Quality Design]</p></div>
@@ -149,7 +154,15 @@
                 <div class="package-service">•<p> 3 Festive Post</p></div>
                 <fieldset class="as-container">
                     <legend class="as-legend">Additional Services</legend>
-                    <div class="as-items"> Copywriting + Strategy + A/B Creative Testing<hr>Full Page Optimization<hr>Pixel Setup for Retargeting<hr>Post Scheduling<hr> Ads Management & Retargeting<hr>Monthly Highlighted Summary<hr>Competitor & Industry Trend Reports</div>
+                    <ul class="as-items">
+                        <li>Copywriting + Strategy + A/B Creative Testing</li><hr>
+                        <li>Full Page Optimization</li><hr>
+                        <li>Pixel Setup for Retargeting</li><hr>
+                        <li>Post Scheduling</li><hr>
+                        <li>Ads Management & Retargeting</li><hr>
+                        <li>Monthly Highlighted Summary</li><hr>
+                        <li>Competitor & Industry Trend Reports</li>
+                    </ul>
                 </fieldset>
             </div>
         </div>
@@ -342,7 +355,7 @@
         <h3 class="git-sub-title">• Contact</h3>
         <h1 class="git-title">Get In Touch</h1>
         <div class="git-item"><svg fill="#ffffff" width="24px" height="24px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M0 1694.235h1920V226H0v1468.235ZM112.941 376.664V338.94H1807.06v37.723L960 1111.233l-847.059-734.57ZM1807.06 526.198v950.513l-351.134-438.89-88.32 70.475 378.353 472.998H174.042l378.353-472.998-88.32-70.475-351.134 438.89V526.198L960 1260.768l847.059-734.57Z" fill-rule="evenodd"></path> </g></svg><p>actionifyx@gmail.com</p></div><hr class="git-hr">
-        <div class="git-item"><svg width="24px" height=24px" viewBox="0 0 48 48" id="b" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" stroke-width="2.832"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.c{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="c" d="m19.308,12.467c-.4234-1.4115-.7215-2.8773-.8813-4.3843-.1571-1.4812-1.449-2.5826-2.9385-2.5826h-6.9092c-1.7767,0-3.1454,1.5345-2.989,3.3043,1.5754,17.8285,15.7771,32.0302,33.6056,33.6056,1.7698.1564,3.3043-1.2073,3.3043-2.9839v-6.1595c0-2.2488-1.1015-3.5362-2.5826-3.6932-1.507-.1598-2.9728-.4579-4.3843-.8813-1.7266-.5179-3.5957-.0304-4.8704,1.2442l-2.9566,2.9566c-5.326-2.8825-9.7164-7.2729-12.5989-12.5989l2.9566-2.9567c1.2746-1.2746,1.7621-3.1438,1.2442-4.8703Z"></path></g></svg><p>+977 9868504181</p></div><hr class="git-hr">
+        <div class="git-item"><svg width="24px" height="24px" viewBox="0 0 48 48" id="b" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" stroke-width="2.832"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.c{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;}</style></defs><path class="c" d="m19.308,12.467c-.4234-1.4115-.7215-2.8773-.8813-4.3843-.1571-1.4812-1.449-2.5826-2.9385-2.5826h-6.9092c-1.7767,0-3.1454,1.5345-2.989,3.3043,1.5754,17.8285,15.7771,32.0302,33.6056,33.6056,1.7698.1564,3.3043-1.2073,3.3043-2.9839v-6.1595c0-2.2488-1.1015-3.5362-2.5826-3.6932-1.507-.1598-2.9728-.4579-4.3843-.8813-1.7266-.5179-3.5957-.0304-4.8704,1.2442l-2.9566,2.9566c-5.326-2.8825-9.7164-7.2729-12.5989-12.5989l2.9566-2.9567c1.2746-1.2746,1.7621-3.1438,1.2442-4.8703Z"></path></g></svg><p>+977 9868504181</p></div><hr class="git-hr">
         <div class="git-item"><svg width="24px" height="24px" viewBox="0 0 8.4666669 8.4666669" id="svg8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs id="defs2"></defs> <g id="layer1" transform="translate(0,-288.53332)"> <path d="m 4.2324219,288.79688 c -1.6042437,0 -2.9101556,1.30591 -2.9101563,2.91015 -10e-7,2.82277 2.7460938,4.96875 2.7460938,4.96875 a 0.26460978,0.26460978 0 0 0 0.3300781,0 c 0,0 2.7460996,-2.14598 2.7460937,-4.96875 -3.4e-6,-1.60424 -1.3078657,-2.91015 -2.9121093,-2.91015 z m 0,0.52929 c 1.3182605,0 2.3828097,1.0626 2.3828125,2.38086 4.8e-6,2.30926 -2.0910618,4.13374 -2.3808594,4.38086 -0.2884142,-0.24588 -2.3828134,-2.0707 -2.3828125,-4.38086 5e-7,-1.31826 1.0625988,-2.38086 2.3808594,-2.38086 z" id="path929" style="color:#ffffff;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#ffffff;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#ffffff;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"></path> <path d="m 4.2324219,290.38477 c -0.7274912,0 -1.3222633,0.59477 -1.3222657,1.32226 -4.5e-6,0.7275 0.5947697,1.32422 1.3222657,1.32422 0.727496,0 1.3242233,-0.59672 1.3242187,-1.32422 -2.3e-6,-0.72749 -0.5967275,-1.32226 -1.3242187,-1.32226 z m 0,0.52929 c 0.4415089,0 0.7949204,0.35146 0.7949219,0.79297 2.7e-6,0.44151 -0.35341,0.79492 -0.7949219,0.79492 -0.441512,0 -0.7929715,-0.35341 -0.7929688,-0.79492 1.4e-6,-0.44151 0.3514598,-0.79297 0.7929688,-0.79297 z" id="circle931" style="color:#ffffff;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#ffffff;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#ffffff;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"></path> </g> </g></svg> <p>Kanchanpur, Nepal 10400</p></div><hr class="git-hr">    
     </div>
     <form class="contact-form-container">

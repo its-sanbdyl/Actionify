@@ -31,7 +31,168 @@ body{
     max-width: 100%;
     width: fit-content;
     margin: 0 auto;
-    padding: 0px clamp(10px, 80px, 90px);
+    padding: 0px 80px;
+}
+
+@media (max-width: 680px){
+    body{
+    padding: 0px 20px;
+    }
+    .logo-head{
+    scale: 0.7;
+}
+
+.navbar{
+    padding: 5px 0px;
+}
+
+.logo a img{
+    max-width: 150px;
+    max-height: 75px;
+}
+
+.drop-down-link{
+    padding: 10px 0px;
+}
+
+.service-dropdown{
+    font-size: 0.9rem;
+}
+.service-dropdown a{
+    width: 100%;
+    padding: 10px;
+}
+
+.menu-icon{
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease;
+    z-index: 100;
+}
+
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+        rotate: 0deg;
+    }
+    to{
+        opacity: 0;
+        rotate: 180deg;
+    }
+}
+
+.menu-title{
+    visibility: hidden;
+    cursor: default;
+}
+
+.hero-content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-title-primary{
+    width: 90%;
+    font-size: 1.8rem !important;
+    line-height: 40px !important;
+    word-spacing: -1px !important;
+    letter-spacing: 1px !important;
+    margin-top: 120px !important;
+}
+
+.hero-button{
+    font-size: 0.9rem !important;
+    padding: 15px 20px !important;
+    margin-top: 60px !important;
+}
+
+.hero-ending{
+    height: 20px !important;
+    padding: 0px 50px;
+    top: 75% !important;
+    justify-content: center !important;
+
+    }
+
+    .scroll-to-explore{
+        font-size: 0.8rem !important;
+}
+
+.scroll-icon{
+    height: 20px;
+    width: 20px;
+}
+.hero-about-me{
+    display: none;
+}
+
+.card-container{
+    animation: none !important; 
+}
+.fw-work-heading{
+    font-size: 1rem;
+}
+
+.fw-works:hover{
+    background-color: hsl(240, 3%, 10%);
+}
+
+.fw-work-category{
+    font-size: 0.7rem !important;
+}
+.contact-us-content{
+    flex-direction: column;
+    gap: 6% !important;
+}
+
+.contact-form-container{
+    margin-top: 20px !important;
+}
+
+.faq-container{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.faq-title{
+    white-space: nowrap;
+    margin-bottom: 50px !important;
+}
+
+.faq-content-container{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+.faq-question{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    font-size: clamp(0.7rem, 1vw + 1rem, 1.5rem);
+    font-weight: normal;
+}
+
+.faq-plus, .faq-minus{
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.faq-plus:hover, .faq-minus:hover{
+    scale: 1.25;
+    transition: 0.25s ease;
+}
+
+.faq-answer{
+    transition: 0.5s ease;
+    margin-top: 15px;
+}
+
+
 }
 
 a{
@@ -114,16 +275,6 @@ a{
     align-items: center;
     padding: 80px 0px;
     position: relative;
-}
-
-@keyframes NavScrollAnimation{
-    0%,80%{
-        opacity: 1;
-        filter: blur(0);
-    }
-    90%,100%{
-        opacity: 0;
-    }
 }
 
 .logo-top{
@@ -408,8 +559,9 @@ a:hover{
 }
 
 .pnp-title{
-    font-size: clamp(2rem, 2vw + 1.5rem, 3.5rem);
+    font-size: clamp(1rem, 1.7rem, 4.5rem);
     margin-bottom: 10px;
+    text-align: center;
     animation: scrollAnime both;
     animation-timeline: view();
 }
@@ -420,6 +572,7 @@ a:hover{
 }
 
 .package-card-container{
+    min-width: 150px;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -431,29 +584,16 @@ a:hover{
 
 .package-card{
     min-height: 800px;
-    max-width: 380px;
+    width: 380px;
     background-image: linear-gradient(to top, hsl(0, 0%, 2%), hsl(0, 0%, 20%));
     padding: 40px 30px;
     border-radius: 20px;
     position: relative;
     border-top: solid 1px var(--highlight-color);
+    overflow: hidden;
 }
 
-#package-card-1:not(:hover),#package-card-3:not(:hover){
-    scale: 1;
-}
-
-#package-card-2:not(:hover){
-    scale: 1;
-}
-
-.package-card:hover{
-    scale: 1.1;
-    transition: 0.5s ease;
-    z-index: 100;
-}
-
-.package-card-2{
+#package-card-2{
     position: relative;
 }
 
@@ -464,6 +604,7 @@ a:hover{
     color: var(--signature-color);
     padding: 5px 10px;
     border-radius: 10px;
+    font-size: 0.8rem;
     top: 5%;
     left: 60%;
     white-space: nowrap;
@@ -520,8 +661,9 @@ a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 5px 0px;
+    flex-wrap: wrap;
     border-radius: 10px;
+    margin: 5px 0px;
     margin-bottom: 20px;
 }
 
@@ -541,6 +683,11 @@ a:hover{
     padding: 5px;
     gap: 5px;
     font-size: 0.9rem;
+}
+
+.platform-items:nth-child(2) li{
+    list-style: none;
+    font-size: 0.8rem;    
 }
 
 .package-hr{
@@ -591,6 +738,11 @@ a:hover{
 
 .as-items{
     font-size: 0.9rem;
+}
+
+.as-items li{
+    list-style: none;
+    text-wrap: wrap;
 }
 
 .card-container{
@@ -846,7 +998,7 @@ a:hover{
     background-color: hsl(240, 3%, 10%);
 }
 
-.fw-works-category{
+.fw-work-category{
     white-space: nowrap;
 }
 
