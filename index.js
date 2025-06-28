@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static('public')); // to serve form.html
+app.use(express.static('docs')); // to serve form.html
 
 // Replace with your actual email and password (for testing, use a test account or OAuth)
 const transporter = nodemailer.createTransport({
