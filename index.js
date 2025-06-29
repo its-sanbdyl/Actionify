@@ -11,14 +11,14 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static('docs')); // to serve form.html
+app.use(express.static('public')); // to serve index.html
 
 // Replace with your actual email and password (for testing, use a test account or OAuth)
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'sandesh.bdyl.2060@gmail.com',        // replace with your email
-    pass: 'hnbo nxkv lvrm subx',           // use app password if using Gmail
+    user: 'sandesh.bdyl.2060@gmail.com',
+    pass: 'hnbo nxkv lvrm subx',
   },
 });
 
